@@ -1,0 +1,168 @@
+﻿@using CarInsuranceAppMVC.Models
+@model Quote
+
+<div class="'row no-gutters m-3"> @*style="background-color: rgba(255,255,255,0)"*@
+    <div class="card col-sm-12 col-md-12 col-lg-8 mx-auto shadow"> @*style="background-color: rgba(255,255,255,0)"*@
+        <div class="card-header text-center">  @*style="background-color: rgba(240, 240, 240, 0.98)"*@
+            <h5 class="m-0">CAR INSURANCE QUOTE</h5>
+        </div>
+        <div class="card-body" > @*style="background-color: rgba(255,255,255,.98)"*@
+            <h3 class="text-center text-primary">Congratulations!</h3>
+            <h5 class="text-center text-primary">You qualify for the following monthy payment</h5>
+            <br />
+            <div class="row mb-3">
+                <div class="col-1"></div>
+                <div class="col-7">Base cost</div>
+                <div class="col-3 text-right text-nowrap">$50.00</div>
+                <div class="col-1"></div>
+            </div>
+
+            @{
+                var cost = 50.00m;
+            }
+
+            @{ //Check Age
+
+                var span = (DateTime.Now - Model.BirthDate).Days;
+                var age = span / 365;
+                if (age < 18)
+                {
+                    cost += 100;
+                    <div class="row mb-3">
+                        <div class="col-1"></div>
+                        <div class="col-7">Under 18 years of age</div>
+                        <div class="col-3 text-right text-nowrap">+$100.00</div>
+                        <div class="col-1"></div>
+                    </div>
+                }
+                else if (age < 25)
+                {
+                    cost += 25;
+                    <div class="row mb-3">
+                        <div class="col-1"></div>
+                        <div class="col-7">Under 25 years of age</div>
+                        <div class="col-3 text-right text-nowrap">+$25.00</div>
+                        <div class="col-1"></div>
+                    </div>
+                }
+                else if (age > 100)
+                {
+                    cost += 25;
+                    <div class="row mb-3">
+                        <div class="col-1"></div>
+                        <div class="col-7">Over 100 years of age</div>
+                        <div class="col-3 text-right text-nowrap">+$25.00</div>
+                        <div class="col-1"></div>
+                    </div>
+                }
+
+            }
+
+            @{ //Check Car Year
+                if (Model.CarYear < 2000)
+                {
+                    cost += 25;
+                    <div class="row mb-3">
+                        <div class="col-1"></div>
+                        <div class="col-7">Vehicle made before year 2000</div>
+                        <div class="col-3 text-right text-nowrap">+$25.00</div>
+                        <div class="col-1"></div>
+                    </div>
+                }
+                else if (Model.CarYear > 2015)
+                {
+                    cost += 25;
+                    <div class="row mb-3">
+                        <div class="col-1"></div>
+                        <div class="col-7">Vehicle made after year 2015</div>
+                        <div class="col-3 text-right text-nowrap">+$25.00</div>
+                        <div class="col-1"></div>
+                    </div>
+                }
+
+            }
+
+
+            @{ //Check Car Make and Model
+
+                if (Model.CarMake == "Porsche")
+                {
+                    cost += 25;
+                    <div class="row mb-3">
+                        <div class="col-1"></div>
+                        <div class="col-7">Make: Porsche</div>
+                        <div class="col-3 text-right text-nowrap">+$25.00</div>
+                        <div class="col-1"></div>
+                    </div>
+
+                    if (Model.CarModel == "911 Carrera")
+                    {
+                        cost += 25;
+                        <div class="row mb-3">
+                            <div class="col-1"></div>
+                            <div class="col-7">Model: 911 Carrera</div>
+                            <div class="col-3 text-right text-nowrap">+$25.00</div>
+                            <div class="col-1"></div>
+                        </div>
+                    }
+                }
+
+            }
+
+            @{ //Check for Traffic Tickets
+
+                if (Model.Tickets > 0)
+                {
+                    cost += (Model.Tickets * 10);
+                    <div class="row mb-3">
+                        <div class="col-1"></div>
+                        <div class="col-7">@Model.Tickets traffic tickets (+$10/month)</div>
+                        <div class="col-3 text-right text-nowrap">+$@(Model.Tickets * 10)</div>
+                        <div class="col-1"></div>
+                    </div>
+                }
+
+            }
+
+            @{ //Check for DUI
+
+                if (Model.DUI > 0)
+                {
+
+                    <div class="row mb-3">
+                        <div class="col-1"></div>
+                        <div class="col-7">DUI conviction</div>
+                        <div class="col-3 text-right text-nowrap">+$@string.Format("{0:#.00}", cost * 0.25m)</div>
+                        <div class="col-1"></div>
+                    </div>
+                    cost *= 1.25m;
+                }
+            }
+
+            @{ //Check for Coverage Option
+
+                if (Model.Coverage == 1)
+                {
+                    <div class="row mb-3">
+                        <div class="col-1"></div>
+                        <div class="col-7">Full coverage</div>
+                        <div class="col-3 text-right text-nowrap">+$@string.Format("{0:#.00}", cost * 0.50m)</div>
+                        <div class="col-1"></div>
+                    </div>
+
+                    cost *= 1.5m;
+                }
+            }
+
+
+            <hr class="ml-5 mr-5" />
+            <div class="row mb-3">
+                <div class="col-1"></div>
+                <div class="col-5">Total Monthly Cost</div>
+                <div class="col-5 text-right text-nowrap text-success"><h1>$@string.Format("{0:#.00}",Model.MonthlyCost)</h1></div>
+                <div class="col-1"></div>
+            </div>
+
+        </div>
+    </div>
+</div>

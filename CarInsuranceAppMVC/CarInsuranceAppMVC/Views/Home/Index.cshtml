@@ -1,0 +1,48 @@
+﻿
+
+
+<div class="'row no-gutters m-3">
+    <div class="card col-sm-12 col-md-12 col-lg-8 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Submit Your Quote Request</h5>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("SignUp", "Home", FormMethod.Post))
+            {
+            <div class="row no-gutters">
+                <div class="form-group col-md-12">
+                    <input name="FirstName" type="text" class="form-control" placeholder="First Name" autofocus />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="LastName" type="text" class="form-control" placeholder="Last Name" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="Email" type="email" class="form-control" placeholder="Email Address" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="BirthDate" type="text" class="form-control" placeholder="Date of Birth" onfocus="(this.type='date')" onblur="(this.type='text')"/>
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="CarYear" type="number" class="form-control" placeholder="Car Year" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="CarMake" type="text" class="form-control" placeholder="Car Make" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="CarModel" type="text" class="form-control" placeholder="Car Model" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="DUI" type="number" class="form-control" placeholder="How many DUI citations total" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="Tickets" type="number" class="form-control" placeholder="How many traffic tickets in past year" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="Coverage" type="number" class="form-control" placeholder="1-Full coverage or 2-Liability Only" />
+                </div>
+                <button type="submit" class="btn btn-block btn-primary mt-4 mb-4">Submit</button>
+            </div>
+            }
+        </div>
+    </div>
+</div>

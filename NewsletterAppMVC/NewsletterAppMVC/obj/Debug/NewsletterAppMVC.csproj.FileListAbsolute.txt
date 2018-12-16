@@ -78,3 +78,7 @@ C:\Users\Student\Desktop\GitHub\CSharp-Projects\NewsletterAppMVC\NewsletterAppMV
 C:\Users\Student\Desktop\GitHub\CSharp-Projects\NewsletterAppMVC\NewsletterAppMVC\obj\Debug\NewsletterAppMVC.csproj.CopyComplete
 C:\Users\Student\Desktop\GitHub\CSharp-Projects\NewsletterAppMVC\NewsletterAppMVC\obj\Debug\NewsletterAppMVC.dll
 C:\Users\Student\Desktop\GitHub\CSharp-Projects\NewsletterAppMVC\NewsletterAppMVC\obj\Debug\NewsletterAppMVC.pdb
+C:\Users\Student\Desktop\GitHub\CSharp-Projects\NewsletterAppMVC\NewsletterAppMVC\bin\EntityFramework.dll
+C:\Users\Student\Desktop\GitHub\CSharp-Projects\NewsletterAppMVC\NewsletterAppMVC\bin\EntityFramework.SqlServer.dll
+C:\Users\Student\Desktop\GitHub\CSharp-Projects\NewsletterAppMVC\NewsletterAppMVC\bin\EntityFramework.xml
+C:\Users\Student\Desktop\GitHub\CSharp-Projects\NewsletterAppMVC\NewsletterAppMVC\bin\EntityFramework.SqlServer.xml
