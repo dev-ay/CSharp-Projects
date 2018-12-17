@@ -9,12 +9,15 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+
     @*<script>
-        $(document).ready(function () {
-            $('li.active').removeClass('active');
-            $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
-        });
-    </script>*@
+            $(document).ready(function () {
+                $('li.active').removeClass('active');
+                $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
+            });
+        </script>*@
 
 </head>
 <body>
@@ -39,12 +42,12 @@
         </div>*@
 
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-        <a class="navbar-brand" href="/Home/Index/">Academy Car Insurance</a>
+        <a class="navbar-brand logo" href="/Home/Index/">@Convert.ToString("Academy Car Insurance").ToUpper()</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto menu">
                 <li class="nav-item ml-3 active">
                     <a class="nav-link" href="/Home/index/">Request Quote</a>
                 </li>
@@ -58,10 +61,10 @@
 
     <div class="container body-content mt-5 pt-4">
         @RenderBody()
-        <br /><br /><br /><br /><br /><br />
+        @*<br /><br /><br /><br /><br /><br />*@
         <hr class="mt-5 border-white" />
         <footer class="text-white" style="margin-bottom:60vh">
-            <p>&copy; @DateTime.Now.Year - Car Insurance ASP.NET MVC Application</p>
+            <p>&copy; @DateTime.Now.Year - Academy Car Insurance ASP.NET MVC Application - Using Entity Framework and SQL Server Database</p>
         </footer>
     </div>
 

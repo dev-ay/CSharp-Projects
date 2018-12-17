@@ -1,0 +1,70 @@
+﻿@using CarInsuranceAppMVC_Excel.ViewModels
+@model List<QuoteVM>
+
+
+
+<div class="row no-gutters m-3" style="border-radius:20px 20px 0 0;">
+    <div class="card col-sm-12 col-md-10 col-lg-8 mx-auto shadow" style="border-radius:20px 20px 0 0;">
+        <div class="card-header text-center text-nowrap flex-nowrap">
+            <h5 class="m-0 heading">@Convert.ToString("Quote Record")</h5>
+        </div>
+
+        <div class="card-body col-lg-11 mx-auto">
+
+            <div class="row mb-3 text-nowrap flex-nowrap">
+                <div class="col-1 text-center">
+                    <strong><u>Id</u></strong>
+                </div>
+                <div class="col-3 text-center">
+                    <strong><u>First Name</u></strong>
+                </div>
+                <div class="col-3 text-center">
+                    <strong><u>Last Name</u></strong>
+                </div>
+                <div class="col-3 text-center">
+                    <strong><u>Email Address</u></strong>
+                </div>
+                <div class="col-2 text-right">
+                    <strong><u>Quote</u></strong>
+                </div>
+                @*<div class="col">
+            <button type="submit" class="btn btn-danger btn-block">Unsubscribe</button>
+        </div>*@
+            </div>
+
+            @foreach (var quote in Model)
+            {
+
+                using (Html.BeginForm("Unsubscribe", "Admin", FormMethod.Post))
+                {
+                    <input name="Id" value="@quote.Id" type="hidden" />
+                    <div class="row mb-3 text-nowrap flex-nowrap">
+                        <div class="col-1 text-center">
+                            @quote.Id
+                        </div>
+                        <div class="col-3 text-center">
+                            @quote.FirstName
+                        </div>
+                        <div class="col-3 text-center">
+                            @quote.LastName
+                        </div>
+                        <div class="col-3 text-center">
+                            @quote.Email
+                        </div>
+                        <div class="col-2 text-right">
+                            @string.Format("{0:C}",quote.MonthlyCost)
+                        </div>
+                        @*<div class="col">
+            <button type="submit" class="btn btn-danger btn-block">Unsubscribe</button>
+        </div>*@
+                    </div>
+                }
+
+            }
+
+        </div>
+    </div>
+</div>
+
+
+

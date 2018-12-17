@@ -1,5 +1,4 @@
 ﻿body {
-    
     padding-bottom: 20px;
     background-image: url('img/bg.jpg');
     background-position: center top;
@@ -9,6 +8,21 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+}
+
+.logo {
+    font-family: 'Audiowide', cursive;
+    font-weight: bold;
+}
+
+.menu {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 16px;
+}
+
+.heading {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20px;
 }
 
 /* Set padding to keep content from hitting the edges */
