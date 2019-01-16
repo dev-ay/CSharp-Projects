@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ScheduleIt2.Models.Message>
+
+@{
+    ViewBag.Title = "Inbox";
+}
+
+<h2>Inbox</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DateSent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateRead)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MessageTitle)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td hidden class="messageId">
+                @Html.DisplayFor(modelItem => item.MessageID)
+            </td>
+            @*<td hidden class="modelSender">
+                @Html.DisplayFor(modelItem => item.Sender)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.DateSent)
+            </td>
+            <td class="readDate">
+                @Html.DisplayFor(modelItem => item.DateRead)
+            </td>
+            <td>
+                <span class="message-title">@Html.DisplayFor(modelItem => item.MessageTitle)</span>
+            </td>
+            <td hidden class="messageContent">
+                @Html.DisplayFor(modelItem => item.Content)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.MessageID })
+            </td>
+        </tr>
+    }
+
+</table>
+
+@* Modal that shows the contents of the message *@
+<div id="inboxModal" class="modal">
+    <div class="modal-content">
+        <h4 id="modalTitle">Error</h4>
+        @*<p>From: <span id="modalFrom"></span></p>*@
+        <p id="modalContent">There was an error getting the message information</p>
+        <div class="btn btn-default closeModal">Close</div>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+﻿@model ScheduleIt2.Models.Schedule
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Schedule</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ScheduleStartDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ScheduleStartDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ScheduleEndDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ScheduleEndDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Repeating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Repeating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TemplateId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TemplateId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

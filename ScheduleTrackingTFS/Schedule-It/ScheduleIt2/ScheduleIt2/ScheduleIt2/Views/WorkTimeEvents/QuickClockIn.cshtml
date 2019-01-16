@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "QuickClockIn";
+}
+<h2>Quick Clock In</h2>
+<body>
+    <div class="form-horizontal" onload="sTime">
+        <hr />
+        <div class="time">
+            <div id="Curr_Time"></div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                User Name:
+                <input type="text" name="UserName" value=""><br />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                Password:
+                <input type="text" name="Password" value=""><br />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Submit" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</body>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        var x = document.getElementById('Curr_Time')
+        function sTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            x.innerHTML = h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+}
