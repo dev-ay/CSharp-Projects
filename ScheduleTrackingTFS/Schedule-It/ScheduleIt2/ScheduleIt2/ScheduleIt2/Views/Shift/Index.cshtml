@@ -1,9 +1,0 @@
-﻿@using ScheduleIt2.Models
-@{  
-    var query = ViewBag.Query;
-    var queryJSON = Html.Raw(query);
-}
-<!--input holds c# data for JS to use-->
-<input id ="shiftData" type="hidden" value='@queryJSON' />
-<div id="shiftCalendar"> 
-</div>
