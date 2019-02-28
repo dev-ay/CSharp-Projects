@@ -3,6 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace GigHub.Models
 {
+    //Supposed to move each of these classes into its own file under ViewModels folder and Namespace
+
     public class ExternalLoginConfirmationViewModel
     {
         [Required]
@@ -79,6 +81,10 @@ namespace GigHub.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [StringLength(100)]
+        public string Name { get; set; }
     }
 
     public class ResetPasswordViewModel
