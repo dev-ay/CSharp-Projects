@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GigHub.Models
@@ -15,5 +16,7 @@ namespace GigHub.Models
         [Key]
         [Column(Order = 2)]
         public string AttendeeId { get; set; }
+
+        public ICollection<object> Followers { get; internal set; }
     }
 }
