@@ -7,12 +7,10 @@
 <h1>@Model.Heading</h1>
 
 <ul class="gigs voffset4">
-    @foreach (var f in Model.Followings)
+    @foreach (var a in Model.Artists)
     {
         <li>
-            <div>
-                @f.Followee
-        </div>
-    </li>
+            <h3>@a.Name</h3>
+        </li>
 }
 </ul>
