@@ -4,8 +4,16 @@
 }
 <h1>@Model.Heading</h1>
 
+@using(Html.BeginForm("Search", "Gigs"))
+    {
+        <div class="form-group">
+            @Html.TextBoxFor(m => m.SearchTerm, new { @class = "form-control" })
+        </div>
+        <input type="submit" value="Search" />
+    }
+
 <ul class="gigs voffset4">
-    @foreach(var gig in Model.UpcomingGigs)
+    @foreach (var gig in Model.UpcomingGigs)
     {
         <li>
             <div class="date">
@@ -16,7 +24,8 @@
                 <span class="artist">
                     @gig.Artist.Name
 
-                    @if(gig.IsCanceled){
+                    @if (gig.IsCanceled)
+                    {
                         <span class="label label-warning">Canceled</span>
                     }
 
@@ -43,7 +52,7 @@
         $(document).ready(function () {
             $(".js-toggle-attendance").click(function (e) {
                 var button = $(e.target);
-                $.post("/api/attendances", { GigId:button.attr("data-gig-id") } )
+                $.post("/api/attendances", { GigId: button.attr("data-gig-id") })
                     .done(function () {
                         button.removeClass("btn-default").addClass("btn-info").text("Going")
                     })
