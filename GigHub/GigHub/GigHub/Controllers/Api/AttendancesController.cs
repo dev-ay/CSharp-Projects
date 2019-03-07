@@ -20,7 +20,7 @@ namespace GigHub.Controllers.Api
         }
 
         [HttpPost]
-        public IHttpActionResult Attend(AttendanceDto dto)
+        public IHttpActionResult Attend (AttendanceDto dto)
         {
             var userId = User.Identity.GetUserId(); //"08974d88-9ec4-4553-a71a-1c6e45480e7e"; 
 
@@ -39,5 +39,30 @@ namespace GigHub.Controllers.Api
 
             return Ok();
         }
+
+
+        //Input parameter must be called "id" as prescribed in WebApiConfig.cs
+        [HttpDelete]
+        public IHttpActionResult Delete(int id)
+        {
+            System.Diagnostics.Debug.WriteLine("Successfully called Delete method on {0}", id);
+
+            var userId = User.Identity.GetUserId();
+
+            var attendance = _context.Attendances
+                .Where(a => a.GigId == id && a.AttendeeId == userId)
+                .FirstOrDefault();
+
+            if (attendance == null)
+                return NotFound();
+            else
+            {
+                _context.Attendances.Remove(attendance);
+                _context.SaveChanges();
+                return Ok(id);
+            }
+
+        }
+
     }
 }

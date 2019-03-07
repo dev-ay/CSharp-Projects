@@ -7,12 +7,16 @@
 @using(Html.BeginForm("Search", "Gigs"))
     {
         <div class="form-group">
-            @Html.TextBoxFor(m => m.SearchTerm, new { @class = "form-control" })
+            <div id="searchGigs" class="input-group">
+                @Html.TextBoxFor(m => m.SearchTerm, new { @class = "form-control", placeholder = "Search by artist, genre, or location..." })
+                <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-search"></i>
+                </span>
+            </div>
         </div>
-        <input type="submit" value="Search" />
     }
 
-<ul class="gigs voffset4">
+<ul id="gigs" class="gigs voffset4">
     @foreach (var gig in Model.UpcomingGigs)
     {
         <li>
@@ -22,7 +26,9 @@
             </div>
             <div class="details">
                 <span class="artist">
-                    @gig.Artist.Name
+                    <a href="@Url.Action("Details", "Gigs", new { id = gig.Id })">
+                        @gig.Artist.Name
+                    </a>
 
                     @if (gig.IsCanceled)
                     {
@@ -31,13 +37,19 @@
 
                     @if (Model.ShowActions)
                     {
-                        <button data-user-id="@gig.ArtistId" class="btn btn-link btn-sm js-toggle-follow">Follow</button>
+                        <button data-user-id="@gig.ArtistId" class="btn btn-link btn-sm js-toggle-follow">
+                            @(Model.Followings.Contains(gig.ArtistId) ? "Following" : "Follow" )
+                        </button>
                     }
                 </span>
                 <span class="genre">@gig.Genre.Name</span>
                 @if (Model.ShowActions && !gig.IsCanceled)
                 {
-                    <button data-gig-id="@gig.Id" class="btn btn-default btn-sm pull-right js-toggle-attendance">Going?</button>
+                    <button 
+                        data-gig-id="@gig.Id" 
+                        class="btn 
+                            @(Model.Attendances.Contains(gig.Id) ? "btn-info" : "btn-default") 
+                            btn-sm pull-right js-toggle-attendance">@(Model.Attendances.Contains(gig.Id) ? "Going" : "Going?" )</button>
                 }
             </div>
         </li>
@@ -50,29 +62,18 @@
 {
     <script>
         $(document).ready(function () {
-            $(".js-toggle-attendance").click(function (e) {
-                var button = $(e.target);
-                $.post("/api/attendances", { GigId: button.attr("data-gig-id") })
-                    .done(function () {
-                        button.removeClass("btn-default").addClass("btn-info").text("Going")
-                    })
-                    .fail(function () {
-                        alert("Something failed!");
-                    })
-            });
-        });
+            GigsController.init("#gigs");
 
-        $(document).ready(function () {
-            $(".js-toggle-follow").click(function (e) {
-                var button = $(e.target);
-                $.post("/api/followings", { FolloweeId: button.attr("data-user-id") })
-                    .done(function () {
-                        button.text("Following")
-                    })
-                    .fail(function () {
-                        alert("Something failed!");
-                    })
-            });
+            //$(".js-toggle-follow").click(function (e) {
+            //    var button = $(e.target);
+            //    $.post("/api/followings", { FolloweeId: button.attr("data-user-id") })
+            //        .done(function () {
+            //            button.text("Following")
+            //        })
+            //        .fail(function () {
+            //            alert("Something failed!");
+            //        })
+            //});
         });
 
 

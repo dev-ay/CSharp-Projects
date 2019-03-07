@@ -17,7 +17,7 @@
 input,
 select,
 textarea {
-  max-width: 280px;
+  max-width: 300px;
 }
 .field-validation-error {
   color: red;
@@ -170,4 +170,7 @@ body {
 }
 .popover-notifications ul.notifications .highlight {
   font-weight: bold;
+}
+#searchGigs {
+  width: 339px;
 }
