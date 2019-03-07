@@ -37,9 +37,7 @@
 
                     @if (Model.ShowActions)
                     {
-                        <button data-user-id="@gig.ArtistId" class="btn btn-link btn-sm js-toggle-follow">
-                            @(Model.Followings.Contains(gig.ArtistId) ? "Following" : "Follow" )
-                        </button>
+                        <button data-user-id="@gig.ArtistId" class="btn btn-link btn-sm js-toggle-follow">@(Model.Followings.Contains(gig.ArtistId) ? "Following" : "Follow" )</button>
                     }
                 </span>
                 <span class="genre">@gig.Genre.Name</span>

@@ -47,8 +47,9 @@ var GigsController = function (attendanceService, followService) {
     }
 
     var doneFollow = function () {
-        var text = (button.text() == "Following") ? "Follow" : "Following";
-        button.text(text); //.toggleClass("btn-info").toggleClass("btn-default")
+        location.reload(true);
+        //var text = (button.text() == "Following") ? "Follow" : "Following";
+        //button.text(text); //.toggleClass("btn-info").toggleClass("btn-default")
     };
 
     var failFollow = function () {
