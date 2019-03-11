@@ -126,3 +126,14 @@ C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub\o
 C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddNotification.resources
 C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub\bin\AutoMapper.dll
 C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub\bin\AutoMapper.xml
+C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub\bin\Ninject.dll
+C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub\bin\Ninject.Extensions.Conventions.dll
+C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub\bin\Ninject.Web.Common.dll
+C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub\bin\Ninject.Web.Mvc.dll
+C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub\bin\Ninject.Web.WebApi.dll
+C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub\bin\WebActivatorEx.dll
+C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub\bin\Ninject.xml
+C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub\bin\Ninject.Extensions.Conventions.xml
+C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub\bin\Ninject.Web.Common.xml
+C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub\bin\Ninject.Web.Mvc.xml
+C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub\bin\Ninject.Web.WebApi.xml
