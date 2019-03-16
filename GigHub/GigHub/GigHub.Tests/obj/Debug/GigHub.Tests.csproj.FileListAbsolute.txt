@@ -25,7 +25,6 @@ C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub.T
 C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub.Tests\bin\Debug\Owin.dll
 C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub.Tests\bin\Debug\AutoMapper.dll
 C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub.Tests\bin\Debug\EntityFramework.dll
-C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub.Tests\bin\Debug\Ninject.Web.Common.dll
 C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub.Tests\bin\Debug\Ninject.dll
 C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub.Tests\bin\Debug\Ninject.Extensions.Conventions.dll
@@ -71,3 +70,5 @@ C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub.T
 C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub.Tests\obj\Debug\GigHub.Tests.csproj.CopyComplete
 C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub.Tests\obj\Debug\GigHub.Tests.dll
 C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub.Tests\obj\Debug\GigHub.Tests.pdb
+C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub.Tests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Student\Desktop\TechAcademy\12-Advanced\Projects\GigHub\GigHub\GigHub.Tests\bin\Debug\EntityFramework.SqlServer.xml
