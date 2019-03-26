@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28306.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys", "WingtipToys\WingtipToys.csproj", "{EAF182E3-EB23-46DE-8A0F-F3B6A848CF9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAF182E3-EB23-46DE-8A0F-F3B6A848CF9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAF182E3-EB23-46DE-8A0F-F3B6A848CF9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAF182E3-EB23-46DE-8A0F-F3B6A848CF9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAF182E3-EB23-46DE-8A0F-F3B6A848CF9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B7FC926-2489-4BCB-AE4D-B759FD1A35A1}
+	EndGlobalSection
+EndGlobal
