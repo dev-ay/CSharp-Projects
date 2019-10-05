@@ -11,20 +11,49 @@ namespace CarInsuranceAppMVC.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Quote
     {
         public int Id { get; set; }
+
+        [Required]
         public string FirstName { get; set; }
+
+        [Required]
         public string LastName { get; set; }
+
+        [Required]
+        [EmailAddress]
         public string Email { get; set; }
+
+        [Required]
         public System.DateTime BirthDate { get; set; }
+
+        [Required]
+        [Range(1900, 2020)]
         public int CarYear { get; set; }
+
+        [Required]
+        [MaxLength(50)]
         public string CarMake { get; set; }
+
+        [Required]
+        [MaxLength(50)]
         public string CarModel { get; set; }
+
+        [Required]
+        [Range(0,100)]
         public int DUI { get; set; }
+
+        [Required]
+        [Range(0,500)]
         public int Tickets { get; set; }
+
+        [Required]
+        [Range(1, 2)]
         public int Coverage { get; set; }
+
         public Nullable<decimal> MonthlyCost { get; set; }
     }
 }
